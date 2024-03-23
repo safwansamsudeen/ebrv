@@ -1,0 +1,107 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-03-21 16:41:58.223978",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "at_printing_section",
+  "print_order",
+  "name1",
+  "qty",
+  "address",
+  "section_break_uzft",
+  "quantity_recieved",
+  "quality",
+  "comments",
+  "recieved_at"
+ ],
+ "fields": [
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Address",
+   "reqd": 1
+  },
+  {
+   "fieldname": "qty",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Number of Copies",
+   "reqd": 1
+  },
+  {
+   "fieldname": "at_printing_section",
+   "fieldtype": "Section Break",
+   "label": "At Printing"
+  },
+  {
+   "depends_on": "eval: doc.workflow_state !== 'Pending'",
+   "fieldname": "section_break_uzft",
+   "fieldtype": "Section Break",
+   "label": "At Regional Office"
+  },
+  {
+   "fieldname": "quantity_recieved",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Quantity Recieved"
+  },
+  {
+   "description": "Mention damages, if any.",
+   "fieldname": "quality",
+   "fieldtype": "Small Text",
+   "label": "Quality"
+  },
+  {
+   "fieldname": "comments",
+   "fieldtype": "Small Text",
+   "label": "Comments"
+  },
+  {
+   "fieldname": "recieved_at",
+   "fieldtype": "Datetime",
+   "label": "Recieved At"
+  },
+  {
+   "fieldname": "print_order",
+   "fieldtype": "Link",
+   "label": "Print Order",
+   "options": "Print Order",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-03-21 17:21:43.499486",
+ "modified_by": "Administrator",
+ "module": "eBRV",
+ "name": "Annexure Delivery Location",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
