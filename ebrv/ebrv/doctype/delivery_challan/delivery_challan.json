@@ -1,0 +1,121 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-03-22 12:57:43.577655",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "general_section",
+  "id",
+  "print_order",
+  "delivery_location",
+  "datetime",
+  "despatch",
+  "book_packaging_section",
+  "number_of_bundles",
+  "copies_per_bundle",
+  "loose_copies",
+  "total_copies"
+ ],
+ "fields": [
+  {
+   "fieldname": "id",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Delivery Challan ID",
+   "non_negative": 1,
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "print_order",
+   "fieldtype": "Link",
+   "label": "Print Order",
+   "options": "Print Order",
+   "reqd": 1
+  },
+  {
+   "fieldname": "general_section",
+   "fieldtype": "Section Break",
+   "label": "General"
+  },
+  {
+   "default": "now",
+   "fieldname": "datetime",
+   "fieldtype": "Datetime",
+   "label": "Date and Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "book_packaging_section",
+   "fieldtype": "Section Break",
+   "label": "Book Packaging"
+  },
+  {
+   "fieldname": "number_of_bundles",
+   "fieldtype": "Int",
+   "label": "Number of Bundles",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "copies_per_bundle",
+   "fieldtype": "Int",
+   "label": "Copies per Bundle",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "loose_copies",
+   "fieldtype": "Int",
+   "label": "Loose Copies",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "total_copies",
+   "fieldtype": "Int",
+   "label": "Total Copies",
+   "non_negative": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "delivery_location",
+   "fieldtype": "Link",
+   "label": "Delivery Location",
+   "options": "Annexure Delivery Location",
+   "reqd": 1
+  },
+  {
+   "fieldname": "despatch",
+   "fieldtype": "Link",
+   "label": "Despatch",
+   "options": "Despatch"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-03-23 18:16:34.394734",
+ "modified_by": "Administrator",
+ "module": "eBRV",
+ "name": "Delivery Challan",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

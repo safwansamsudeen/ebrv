@@ -2,6 +2,15 @@
 // For license information, please see license.txt
 
 frappe.ui.form.on("Annexure Delivery Location", {
+	refresh(frm) {
+		frappe.db.exists("Delivery Challan");
+		frm.add_custom_button("Raise Delivery Challan", () => {
+			const newDoc = frappe.model.make_new_doc_and_get_name("Delivery Challan");
+			frappe.set_route("Form", "Delivery Challan", newDoc);
+			frappe.model.set_value("Delivery Challan", newDoc, "delivery_location", frm.doc.name);
+			frappe.model.set_value("Delivery Challan", newDoc, "print_order", frm.doc.print_order);
+		});
+	},
 	async before_save(frm) {
 		if (frm.doc.qty <= 0) {
 			frappe.throw("Invalid quantity - it should be more than zero.");
