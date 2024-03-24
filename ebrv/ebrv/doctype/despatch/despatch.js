@@ -7,4 +7,12 @@ frappe.ui.form.on("Despatch", {
 			frappe.set_route("Form", "Despatch", frm.doc.despatch_id);
 		}
 	},
+	refresh(frm) {
+		frm.add_custom_button("Assign DCs", () => {
+			frappe.desk.despatch_id = frm.doc.name;
+			frappe.set_route("List", "Delivery Challan", "List", {
+				print_order: ["=", frm.doc.print_order],
+			});
+		});
+	},
 });

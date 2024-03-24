@@ -5,6 +5,7 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "print_order",
   "despatch_id",
   "mode_of_transport",
   "couriertransporter_name",
@@ -63,11 +64,18 @@
    "label": "Depatch ID",
    "reqd": 1,
    "unique": 1
+  },
+  {
+   "fieldname": "print_order",
+   "fieldtype": "Link",
+   "label": "Print Order",
+   "options": "Print Order",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-03-23 23:03:45.517826",
+ "modified": "2024-03-23 23:37:20.747654",
  "modified_by": "Administrator",
  "module": "eBRV",
  "name": "Despatch",

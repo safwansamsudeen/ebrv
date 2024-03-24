@@ -13,6 +13,14 @@ frappe.ui.form.on("Delivery Challan", {
 	number_of_bundles(frm) {
 		update_total_copies(frm.doc);
 	},
+	before_submit(frm) {
+		frappe.db.set_value(
+			"Annexure Delivery Location",
+			frm.doc.delivery_location,
+			"workflow_state",
+			"DC Raised"
+		);
+	},
 	copies_per_bundle(frm) {
 		update_total_copies(frm.doc);
 	},

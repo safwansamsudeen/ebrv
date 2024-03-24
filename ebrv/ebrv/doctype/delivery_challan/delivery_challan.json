@@ -15,7 +15,8 @@
   "number_of_bundles",
   "copies_per_bundle",
   "loose_copies",
-  "total_copies"
+  "total_copies",
+  "amended_from"
  ],
  "fields": [
   {
@@ -92,11 +93,22 @@
    "fieldtype": "Link",
    "label": "Despatch",
    "options": "Despatch"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Delivery Challan",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
   }
  ],
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2024-03-23 18:16:34.394734",
+ "modified": "2024-03-24 16:12:14.987996",
  "modified_by": "Administrator",
  "module": "eBRV",
  "name": "Delivery Challan",
